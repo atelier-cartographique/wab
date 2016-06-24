@@ -617,11 +617,12 @@ h1.title {
   font-family: "gap_sans";
   font-weight: 400;
   font-style: initial;
-  font-size: 5.5vmax;
+  font-size: 3.8vmax;
   line-height: inherit;
   color: blue;
   width: 100%;
   display: block;
+  text-transform: uppercase;
 }
 @media only screen and (max-device-width: 1280px) and (orientation: portrait) {
 }
