@@ -731,6 +731,14 @@ h1.title {
 .text.newsletter input[placeholder="*"] {
   color: red;
 }
+.text.newsletter #mc_embed_signup div.mce_inline_error {
+  margin: 0 0 1em 0;
+  padding: 5px 10px;
+  font-weight: normal;
+  background-color: transparent;
+  z-index: 1;
+  color: #3232ff;
+}
 .text.iframe-wrapper {
   margin-top: 7vmax;
   position: relative;
