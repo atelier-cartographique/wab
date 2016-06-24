@@ -162,17 +162,17 @@ table {
 }*/
 @media (max-width: 767px) {
   body {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
 }
 @media (min-width: 767px) and (max-width: 1920px) {
   body {
-    font-size: calc(12px + 15 * ( (100vw - 767px) / (1920 - 767) )) !important;
+    font-size: calc(18px + 8 * ( (100vw - 767px) / (1920 - 767) )) !important;
   }
 }
 @media (min-width: 1920px) {
   body {
-    font-size: 27px !important;
+    font-size: 26px !important;
   }
 }
 @font-face {
@@ -684,7 +684,7 @@ h1.title {
   font-family: "gap_sans";
   font-weight: 100;
   font-style: initial;
-  font-size: 150%;
+  font-size: 125%;
   line-height: inherit;
   color: blue;
   padding-bottom: 18px;
