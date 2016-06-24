@@ -4,6 +4,14 @@ body {
     height: 100%;
 }
 
+a:link, a:visited {
+    color: @baseFontColor;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 p {
     padding-bottom: @margin / 2;
 }
@@ -12,7 +20,6 @@ h1.title {
     .font(@weight:@bold; @size:@HeaderH - 3.2;);
     width: 100%;
     display: block;
-    text-transform: uppercase;
     @media @portrait-s {
         // .font(@family:"LMMono10"; @size:175%;);
         // padding-bottom: @margin;
@@ -56,6 +63,8 @@ h1.title {
     h2 {
         .font(@size: 150%;);
         padding-bottom: @margin;
+        text-transform: uppercase;
+
     }
 
     li {
@@ -77,20 +86,28 @@ h1.title {
              width: 200px;
         }
         input {
-            .radius(5px);
+            // .radius(5px);
+            box-sizing: border-box;
+            width: calc(~"@{gridSize} - @{margin} * 2");
+            vertical-align: middle;
             margin-top: @margin / 4;
             margin-bottom: @margin / 2;
             cursor: text;
-            transition: box-shadow 0.6s;
-            box-shadow: 0px 0px 1px @blue;
-            border: 0px;
+            padding: @margin / 4;
+            // transition: box-shadow 0.6s;
+            // box-shadow: 0px 0px 1px @blue;
+            border: 1px solid @baseFontColor;
             background-color: transparent;
 
 
            &:hover, &:active {
-            transition: box-shadow 0.6s;
-            box-shadow: 0px 0px 6px @blue;
+            // transition: box-shadow 0.6s;
+            // box-shadow: 0px 0px 6px @blue;
             // border: 0px;
+           }
+
+           &[type=email] {
+               cursor: text;
            }
 
             &[type=submit] {
@@ -101,6 +118,7 @@ h1.title {
                 margin-top: @margin;
                 width: 150px;
             }
+
             &[placeholder="*"] {
                 color: red;
             }

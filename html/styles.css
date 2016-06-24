@@ -610,6 +610,13 @@ body {
   color: blue;
   height: 100%;
 }
+a:link,
+a:visited {
+  color: blue;
+}
+a:hover {
+  cursor: pointer;
+}
 p {
   padding-bottom: 9px;
 }
@@ -622,7 +629,6 @@ h1.title {
   color: blue;
   width: 100%;
   display: block;
-  text-transform: uppercase;
 }
 @media only screen and (max-device-width: 1280px) and (orientation: portrait) {
 }
@@ -682,6 +688,7 @@ h1.title {
   line-height: inherit;
   color: blue;
   padding-bottom: 18px;
+  text-transform: uppercase;
 }
 .text li {
   margin-bottom: 9px;
@@ -700,22 +707,18 @@ h1.title {
   width: 200px;
 }
 .text.newsletter input {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
+  box-sizing: border-box;
+  width: calc(280px - 18px * 2);
+  vertical-align: middle;
   margin-top: 4.5px;
   margin-bottom: 9px;
   cursor: text;
-  transition: box-shadow 0.6s;
-  box-shadow: 0px 0px 1px blue;
-  border: 0px;
+  padding: 4.5px;
+  border: 1px solid blue;
   background-color: transparent;
 }
-.text.newsletter input:hover,
-.text.newsletter input:active {
-  transition: box-shadow 0.6s;
-  box-shadow: 0px 0px 6px blue;
+.text.newsletter input[type=email] {
+  cursor: text;
 }
 .text.newsletter input[type=submit] {
   cursor: pointer;
@@ -750,56 +753,4 @@ h1.title {
   display: block;
   text-align: center;
   font-size: 75%;
-}
-article.index {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 1;
-  overflow: auto;
-}
-@media only screen and (max-device-width: 767px) {
-  article.index .index-header {
-    margin-bottom: 18px;
-  }
-}
-article.index .index-header .index-links {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: initial;
-  z-index: 1;
-  font-family: "gap_sans";
-  font-weight: 100;
-  font-style: initial;
-  font-size: 100%;
-  line-height: inherit;
-  color: blue;
-  width: 250px;
-  text-align: right;
-}
-article.index .index-header .index-links a {
-  text-decoration: none;
-  padding: 0 4.5px;
-  color: blue;
-}
-article.index .index-header .index-links a:hover {
-  text-decoration: underline;
-}
-@media only screen and (max-device-width: 767px) {
-  article.index .index-header .index-links {
-    position: absolute;
-    top: -4.66666667vmax;
-    right: 0px;
-    bottom: initial;
-    left: initial;
-    z-index: 1;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
 }
