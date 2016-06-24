@@ -739,17 +739,17 @@ h1.title {
   z-index: 1;
   color: #3232ff;
 }
-.text.iframe-wrapper {
+.text.waend-wrapper {
   margin-top: 7vmax;
   position: relative;
   width: initial;
 }
 @media (max-width: 767px) {
-  .text.iframe-wrapper {
+  .text.waend-wrapper {
     display: none;
   }
 }
-.text.iframe-wrapper .iframe-content {
+.text.waend-wrapper .iframe-content {
   width: calc(100vw - 7vmax - 2 * 18px);
   height: calc((100vw - 7vmax - 2 * 18px) * 0.6);
   min-width: 560px;
@@ -757,7 +757,7 @@ h1.title {
   max-width: 1084px;
   max-height: 650.4px;
 }
-.text.iframe-wrapper .link-waend {
+.text.waend-wrapper .link-waend {
   display: block;
   text-align: center;
   font-size: 75%;
