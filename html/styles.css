@@ -617,7 +617,7 @@ h1.title {
   font-family: "gap_sans";
   font-weight: 400;
   font-style: initial;
-  font-size: 3.5vmax;
+  font-size: 5.5vmax;
   line-height: inherit;
   color: blue;
   width: 100%;
@@ -636,36 +636,36 @@ h1.title {
   font-weight: 100;
   font-style: initial;
   font-size: inherit;
-  line-height: 5vmax;
+  line-height: 7vmax;
   color: blue;
-  height: 5vmax;
+  height: 7vmax;
   vertical-align: middle;
-  padding-left: 5vmax;
+  padding-left: 7vmax;
 }
 .margin-left {
   position: absolute;
-  top: 5vmax;
+  top: 7vmax;
   right: initial;
   bottom: 0px;
   left: 0px;
   z-index: 1;
-  width: 5vmax;
+  width: 7vmax;
 }
 .main {
   position: absolute;
-  top: 5vmax;
+  top: 7vmax;
   right: 0px;
   bottom: 0px;
-  left: 5vmax;
+  left: 7vmax;
   z-index: 1;
   position: relative;
-  width: calc(100vw - 5vmax);
-  min-height: calc(100vh - 5vmax);
+  width: calc(100vw - 7vmax);
+  min-height: calc(100vh - 7vmax);
   background-color: #fff;
   background-image: url("images/grid.svg");
   border-left: 4px solid blue;
   border-top: 4px solid blue;
-  padding-bottom: 5vmax;
+  padding-bottom: 7vmax;
 }
 .text {
   width: 280px;
@@ -680,7 +680,6 @@ h1.title {
   font-size: 150%;
   line-height: inherit;
   color: blue;
-  text-align: center;
   padding-bottom: 18px;
 }
 .text li {
@@ -688,7 +687,6 @@ h1.title {
 }
 .text.newsletter {
   width: 280px;
-  text-align: center;
 }
 .text.newsletter label,
 .text.newsletter input {
@@ -730,7 +728,7 @@ h1.title {
   color: red;
 }
 .text.iframe-wrapper {
-  margin-top: 5vmax;
+  margin-top: 7vmax;
   position: relative;
   width: initial;
 }
@@ -740,8 +738,8 @@ h1.title {
   }
 }
 .text.iframe-wrapper .iframe-content {
-  width: calc(100vw - 5vmax - 2 * 18px);
-  height: calc((100vw - 5vmax - 2 * 18px) * 0.6);
+  width: calc(100vw - 7vmax - 2 * 18px);
+  height: calc((100vw - 7vmax - 2 * 18px) * 0.6);
   min-width: 560px;
   min-height: 314.4px;
   max-width: 1084px;
@@ -793,7 +791,7 @@ article.index .index-header .index-links a:hover {
 @media only screen and (max-device-width: 767px) {
   article.index .index-header .index-links {
     position: absolute;
-    top: -3.33333333vmax;
+    top: -4.66666667vmax;
     right: 0px;
     bottom: initial;
     left: initial;
