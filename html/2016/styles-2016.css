@@ -607,12 +607,12 @@ body {
   font-style: initial;
   font-size: inherit;
   line-height: 125%;
-  color: #1b5faa;
+  color: blue;
   height: 100%;
 }
 a:link,
 a:visited {
-  color: #1b5faa;
+  color: blue;
 }
 a:hover {
   cursor: pointer;
@@ -626,21 +626,11 @@ h1.title {
   font-style: initial;
   font-size: 3.8vmax;
   line-height: inherit;
-  color: #1b5faa;
+  color: blue;
   width: 100%;
   display: block;
 }
 @media only screen and (max-device-width: 1280px) and (orientation: portrait) {
-}
-.margin-header {
-  display: flex;
-  align-items: center;
-}
-.margin-header .index-header {
-  display: flex;
-}
-.margin-header img {
-  height: 2.8vmax;
 }
 .margin-header {
   position: absolute;
@@ -654,7 +644,7 @@ h1.title {
   font-style: initial;
   font-size: inherit;
   line-height: 7vmax;
-  color: #1b5faa;
+  color: blue;
   height: 7vmax;
   vertical-align: middle;
   padding-left: 7vmax;
@@ -680,8 +670,8 @@ h1.title {
   min-height: calc(100vh - 7vmax);
   background-color: #fff;
   background-image: url("images/grid.svg");
-  border-left: 4px solid #1b5faa;
-  border-top: 4px solid #1b5faa;
+  border-left: 4px solid blue;
+  border-top: 4px solid blue;
   padding-bottom: 7vmax;
 }
 .text {
@@ -696,7 +686,7 @@ h1.title {
   font-style: initial;
   font-size: 125%;
   line-height: inherit;
-  color: #1b5faa;
+  color: blue;
   padding-bottom: 18px;
   text-transform: uppercase;
 }
@@ -713,7 +703,7 @@ h1.title {
   font-style: initial;
   font-size: inherit;
   line-height: inherit;
-  color: #1b5faa;
+  color: blue;
   width: 200px;
 }
 .text.newsletter input {
@@ -724,7 +714,7 @@ h1.title {
   margin-bottom: 9px;
   cursor: text;
   padding: 4.5px;
-  border: 1px solid #1b5faa;
+  border: 1px solid blue;
   background-color: transparent;
 }
 .text.newsletter input[type=email] {
@@ -732,7 +722,7 @@ h1.title {
 }
 .text.newsletter input[type=submit] {
   cursor: pointer;
-  background-color: #1b5faa;
+  background-color: blue;
   color: #fff;
   border: 0px;
   margin-top: 18px;
@@ -747,7 +737,7 @@ h1.title {
   font-weight: normal;
   background-color: transparent;
   z-index: 1;
-  color: #4d91dc;
+  color: #3232ff;
 }
 .text.waend-wrapper {
   margin-top: 7vmax;
