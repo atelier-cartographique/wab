@@ -636,7 +636,8 @@ h1.title {
   display: flex;
   align-items: center;
 }
-.margin-header .index-header {
+.margin-header .index-header,
+.margin-header a {
   display: flex;
 }
 .margin-header img {
