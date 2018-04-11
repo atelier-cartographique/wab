@@ -657,7 +657,7 @@ h1.title {
   color: #1b5faa;
   height: 7vmax;
   vertical-align: middle;
-  padding-left: 7vmax;
+  padding-left: 18px;
 }
 .margin-left {
   position: absolute;
@@ -673,19 +673,20 @@ h1.title {
   top: 7vmax;
   right: 0px;
   bottom: 0px;
-  left: 7vmax;
+  left: 0px;
   z-index: 1;
   position: relative;
-  width: calc(100vw - 7vmax);
+  width: 100%;
   min-height: calc(100vh - 7vmax);
   background-color: #fff;
-  background-image: url("images/grid.svg");
-  border-left: 4px solid #1b5faa;
-  border-top: 4px solid #1b5faa;
+  background-image: url('images/grid.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-bottom: 7vmax;
 }
 .text {
-  width: 280px;
+  width: 310px;
   padding: 18px;
   display: inline-block;
   vertical-align: top;
@@ -704,10 +705,10 @@ h1.title {
   margin-bottom: 9px;
 }
 .text.newsletter {
-  width: 280px;
+  width: 310px;
 }
-.text.newsletter label,
-.text.newsletter input {
+.text.newsletter input,
+.text.newsletter label {
   font-family: "gap_sans";
   font-weight: 100;
   font-style: initial;
@@ -718,7 +719,7 @@ h1.title {
 }
 .text.newsletter input {
   box-sizing: border-box;
-  width: calc(280px - 18px * 2);
+  width: calc(310px - 18px * 2);
   vertical-align: middle;
   margin-top: 4.5px;
   margin-bottom: 9px;
@@ -734,7 +735,7 @@ h1.title {
   cursor: pointer;
   background-color: #1b5faa;
   color: #fff;
-  border: 0px;
+  border: 0;
   margin-top: 18px;
   width: 150px;
 }
@@ -742,7 +743,7 @@ h1.title {
   color: red;
 }
 .text.newsletter #mc_embed_signup div.mce_inline_error {
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
   padding: 5px 10px;
   font-weight: normal;
   background-color: transparent;
@@ -762,10 +763,10 @@ h1.title {
 .text.waend-wrapper .iframe-content {
   width: calc(100vw - 7vmax - 2 * 18px);
   height: calc((100vw - 7vmax - 2 * 18px) * 0.6);
-  min-width: 560px;
-  min-height: 314.4px;
-  max-width: 1084px;
-  max-height: 650.4px;
+  min-width: 620px;
+  min-height: 350.4px;
+  max-width: 1204px;
+  max-height: 722.4px;
 }
 .text.waend-wrapper .link-waend {
   display: block;

@@ -1,6 +1,5 @@
 body {
-    .font(@line-height: @baseLineHeight;
-    );
+    .font(@line-height: @baseLineHeight;);
     height: 100%;
 }
 
@@ -18,9 +17,7 @@ p {
 }
 
 h1.title {
-    .font(@weight: @bold;
-    @size: @HeaderH - 3.2;
-    );
+    .font(@weight: @bold; @size: @HeaderH - 3.2;);
     width: 100%;
     display: block;
     @media @portrait-s {
@@ -32,67 +29,71 @@ h1.title {
 .margin-header {
     display: flex;
     align-items: center;
+
     .index-header {
         display: flex;
     }
+
     img {
         height: @HeaderH - 4.2;
     }
 }
 
 .margin-header {
-    .absolute(@bottom: initial;
-    );
-    .font(@line-height: @HeaderH;
-    );
+    .absolute(@bottom: initial;);
+    .font(@line-height: @HeaderH;);
     height: @HeaderH;
     vertical-align: middle;
-    padding-left: @HeaderH;
+    padding-left: @margin;
 }
 
 .margin-left {
-    .absolute(@right: initial;
-    @top: @HeaderH;
-    );
+    .absolute(@right: initial; @top: @HeaderH;);
     width: @HeaderH; // padding: @margin;
     // background-color: red;
 }
 
 .main {
-    .absolute(@top: @HeaderH;
-    @left: @HeaderH;
-    );
+    .absolute(@top: @HeaderH;);
     position: relative;
-    width: calc(~"100vw - @{HeaderH}");
+    // width: calc(~"100vw - @{HeaderH}");
+    width: 100%;
     min-height: calc(~"100vh - @{HeaderH}");
     background-color: #fff;
-    background-image: url("images/grid.svg");
-    border-left: 4px solid @blue;
-    border-top: 4px solid @blue;
+    background-image: url('images/grid.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // border-left: 4px solid @blue;
+    // border-top: 4px solid @blue;
     padding-bottom: @HeaderH;
 }
 
 .text {
     width: @gridSize;
-    padding: @margin ;
+    padding: @margin;
     display: inline-block;
     vertical-align: top; // background-color: #ccc;
+
     h2 {
-        .font(@size: 125%;
-        );
+        .font(@size: 125%;);
         padding-bottom: @margin;
         text-transform: uppercase;
     }
+
     li {
         margin-bottom: @margin / 2;
     }
+
     &.newsletter {
         width: @gridSize; // height: @gridSize;
-        label,
-        input {
+
+        input,
+        label {
             .font();
             width: 200px;
         }
+
         input {
             box-sizing: border-box;
             width: calc(~"@{gridSize} - @{margin} * 2");
@@ -103,23 +104,27 @@ h1.title {
             padding: @margin / 4;
             border: 1px solid @baseFontColor;
             background-color: transparent;
+
             &[type=email] {
                 cursor: text;
             }
+
             &[type=submit] {
                 cursor: pointer;
                 background-color: @blue;
                 color: #fff;
-                border: 0px;
+                border: 0;
                 margin-top: @margin;
                 width: 150px;
             }
+
             &[placeholder="*"] {
                 color: red;
             }
         }
+
         #mc_embed_signup div.mce_inline_error {
-            margin: 0 0 1em 0;
+            margin: 0 0 1em;
             padding: 5px 10px;
             font-weight: normal;
             background-color: transparent;
@@ -127,6 +132,7 @@ h1.title {
             color: @blue + 50%;
         }
     }
+
     &.waend-wrapper {
         margin-top: @HeaderH;
         position: relative;
@@ -134,6 +140,7 @@ h1.title {
         @media (max-width: @xsmall) {
             display: none;
         }
+
         .iframe-content {
             width: calc(~"100vw - @{HeaderH} - 2 * @{margin}");
             height: calc(~"(100vw - @{HeaderH} - 2 * @{margin}) * 0.6");
@@ -142,6 +149,7 @@ h1.title {
             max-width: @gridSize * 4 - 2 * @margin;
             max-height: (@gridSize * 4 - 2 * @margin) * 0.6;
         }
+
         .link-waend {
             display: block;
             text-align: center;
