@@ -56,16 +56,13 @@ h1.title {
 .main {
     .absolute(@top: @HeaderH;);
     position: relative;
-    // width: calc(~"100vw - @{HeaderH}");
     width: 100%;
     min-height: calc(~"100vh - @{HeaderH}");
     background-color: #fff;
     background-image: url('images/grid.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    // border-left: 4px solid @blue;
-    // border-top: 4px solid @blue;
+    background-position: top;
     padding-bottom: @HeaderH;
 }
 

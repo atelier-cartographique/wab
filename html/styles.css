@@ -683,7 +683,7 @@ h1.title {
   background-image: url('images/grid.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   padding-bottom: 7vmax;
 }
 .text {
