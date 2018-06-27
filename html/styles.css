@@ -618,9 +618,10 @@ a:hover {
   cursor: pointer;
 }
 div:target {
-  border: 2px solid #1b5faa;
-  width: 300px;
-  margin: 5px;
+  border: 1px solid #1b5faa;
+  width: 292px;
+  margin: 9px;
+  padding: 9px !important;
   background-color: #fff;
 }
 p {

@@ -13,9 +13,10 @@ a:hover {
 }
 
 div:target {
-    border: 2px solid rgb(27, 95, 170);
-    width: @gridSize - 10px;
-    margin: 5px;
+    border: 1px solid rgb(27, 95, 170);
+    width: @gridSize - @margin;
+    margin: @margin / 2;
+    padding: @margin / 2 !important;
     background-color: #fff;
 }
 
