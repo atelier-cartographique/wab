@@ -617,6 +617,12 @@ a:visited {
 a:hover {
   cursor: pointer;
 }
+div:target {
+  border: 2px solid #1b5faa;
+  width: 300px;
+  margin: 5px;
+  background-color: #fff;
+}
 p {
   padding-bottom: 9px;
 }
