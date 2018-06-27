@@ -12,11 +12,20 @@ a:hover {
     cursor: pointer;
 }
 
-div:target {
+a.anchor {
+    text-decoration: none !important;
+}
+
+.agenda-item {
+    border: 1px solid transparent;
+    width: @gridSize - @margin + 2px !important;
+    margin: @margin / 2 - 1px;
+    padding: @margin / 2 - 1px !important;
+}
+
+div:target,
+.agenda-item:hover {
     border: 1px solid rgb(27, 95, 170);
-    width: @gridSize - @margin;
-    margin: @margin / 2;
-    padding: @margin / 2 !important;
     background-color: #fff;
 }
 

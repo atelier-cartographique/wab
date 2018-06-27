@@ -617,11 +617,18 @@ a:visited {
 a:hover {
   cursor: pointer;
 }
-div:target {
+a.anchor {
+  text-decoration: none !important;
+}
+.agenda-item {
+  border: 1px solid transparent;
+  width: 294px !important;
+  margin: 8px;
+  padding: 8px !important;
+}
+div:target,
+.agenda-item:hover {
   border: 1px solid #1b5faa;
-  width: 292px;
-  margin: 9px;
-  padding: 9px !important;
   background-color: #fff;
 }
 p {
