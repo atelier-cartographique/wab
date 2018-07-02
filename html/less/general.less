@@ -81,6 +81,11 @@ h1.title {
     background-size: cover;
     background-position: top;
     padding-bottom: @HeaderH;
+
+    @media only screen and (orientation: portrait) {
+        background-image: none;
+        border-top: 2px solid @blue;
+    }
 }
 
 .text {
