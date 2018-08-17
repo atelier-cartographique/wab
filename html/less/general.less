@@ -17,7 +17,7 @@ a.anchor {
 }
 
 .agenda-item {
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
     width: @gridSize - @margin + 2px !important;
     margin: @margin / 2 - 1px;
     padding: @margin / 2 - 1px !important;
@@ -25,8 +25,25 @@ a.anchor {
 
 div:target,
 .agenda-item:hover {
-    border: 1px solid rgb(27, 95, 170);
-    background-color: #fff;
+    // border: 1px solid rgb(27, 95, 170);
+    // background-color: #fff;
+    background: @blue;
+    color: #fff !important;
+    border-color: #fff;
+
+    * {color : #fff !important;}
+}
+
+.event-core {
+    // color: crimson !important;
+    border-left: 3px solid @blue;
+    padding-left: @margin / 2;
+}
+
+.event-extra {
+    // color: coral !important;
+    border-left: 7px double @blue;
+    padding-left: @margin / 2;
 }
 
 p {
@@ -46,6 +63,7 @@ h1.title {
 .margin-header {
     display: flex;
     align-items: center;
+    border-bottom: 3px solid @blue;
 
     .index-header, a {
         display: flex;
@@ -76,10 +94,10 @@ h1.title {
     width: 100%;
     min-height: calc(~"100vh - @{HeaderH}");
     background-color: #fff;
-    background-image: url('images/grid.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
+    // background-image: url('images/grid.svg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: top;
     padding-bottom: @HeaderH;
 
     @media only screen and (orientation: portrait) {
@@ -102,6 +120,12 @@ h1.title {
 
     li {
         margin-bottom: @margin / 2;
+    }
+
+    &.agenda li {
+        margin-bottom: @margin;
+
+        &.legend .event-core { margin-bottom: @margin / 3;}
     }
 
     &.newsletter {

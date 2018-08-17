@@ -621,15 +621,27 @@ a.anchor {
   text-decoration: none !important;
 }
 .agenda-item {
-  border: 1px solid transparent;
   width: 294px !important;
   margin: 8px;
   padding: 8px !important;
 }
 div:target,
 .agenda-item:hover {
-  border: 1px solid #1b5faa;
-  background-color: #fff;
+  background: #1b5faa;
+  color: #fff !important;
+  border-color: #fff;
+}
+div:target *,
+.agenda-item:hover * {
+  color: #fff !important;
+}
+.event-core {
+  border-left: 3px solid #1b5faa;
+  padding-left: 9px;
+}
+.event-extra {
+  border-left: 7px double #1b5faa;
+  padding-left: 9px;
 }
 p {
   padding-bottom: 9px;
@@ -649,6 +661,7 @@ h1.title {
 .margin-header {
   display: flex;
   align-items: center;
+  border-bottom: 3px solid #1b5faa;
 }
 .margin-header .index-header,
 .margin-header a {
@@ -694,10 +707,6 @@ h1.title {
   width: 100%;
   min-height: calc(100vh - 7vmax);
   background-color: #fff;
-  background-image: url('images/grid.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
   padding-bottom: 7vmax;
 }
 @media only screen and (orientation: portrait) {
@@ -724,6 +733,12 @@ h1.title {
 }
 .text li {
   margin-bottom: 9px;
+}
+.text.agenda li {
+  margin-bottom: 18px;
+}
+.text.agenda li.legend .event-core {
+  margin-bottom: 6px;
 }
 .text.newsletter {
   width: 310px;
