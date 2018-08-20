@@ -643,6 +643,9 @@ div:target *,
   border-left: 7px double #1b5faa;
   padding-left: 9px;
 }
+.event-title {
+  font-weight: bold;
+}
 p {
   padding-bottom: 9px;
 }
