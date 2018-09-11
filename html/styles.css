@@ -722,6 +722,31 @@ h1.title {
   width: 100%;
   border: 0.5px solid #1b5faa;
 }
+@media (min-width: 250px) {
+  .main > div {
+    width: 100%;
+  }
+}
+@media (min-width: 500px) {
+  .main > div {
+    width: 50%;
+  }
+}
+@media (min-width: 750px) {
+  .main > div {
+    width: 30%;
+  }
+}
+@media (min-width: 1000px) {
+  .main > div {
+    width: 25%;
+  }
+}
+@media (min-width: 1250px) {
+  .main > div {
+    width: 20%;
+  }
+}
 .text {
   width: 310px;
   padding: 18px;
