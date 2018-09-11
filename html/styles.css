@@ -724,27 +724,27 @@ h1.title {
 }
 @media (min-width: 250px) {
   .main > div {
-    width: 100%;
+    width: calc(100vw);
   }
 }
 @media (min-width: 500px) {
   .main > div {
-    width: 50%;
+    width: calc(100vw / 2 - 10px);
   }
 }
 @media (min-width: 750px) {
   .main > div {
-    width: 30%;
+    width: calc(100vw / 3 - 9px);
   }
 }
 @media (min-width: 1000px) {
   .main > div {
-    width: 25%;
+    width: calc(100vw / 4 - 8px);
   }
 }
 @media (min-width: 1250px) {
   .main > div {
-    width: 20%;
+    width: calc(100vw / 5 - 8px);
   }
 }
 .text {
