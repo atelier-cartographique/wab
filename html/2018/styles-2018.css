@@ -1,0 +1,843 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'gap_sans';
+  src: url('fonts/gapsans-webfont.eot');
+  src: url('fonts/gapsans-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gapsans-webfont.woff2') format('woff2'), url('fonts/gapsans-webfont.woff') format('woff'), url('fonts/gapsans-webfont.ttf') format('truetype'), url('fonts/gapsans-webfont.svg#gap_sansregular') format('svg');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'gap_sans';
+  src: url('fonts/gapsansbold-webfont.eot');
+  src: url('fonts/gapsansbold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gapsansbold-webfont.woff2') format('woff2'), url('fonts/gapsansbold-webfont.woff') format('woff'), url('fonts/gapsansbold-webfont.ttf') format('truetype'), url('fonts/gapsansbold-webfont.svg#gap_sansbold') format('svg');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'gap_sans';
+  src: url('fonts/gapsansblack-webfont.eot');
+  src: url('fonts/gapsansblack-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/gapsansblack-webfont.woff2') format('woff2'), url('fonts/gapsansblack-webfont.woff') format('woff'), url('fonts/gapsansblack-webfont.ttf') format('truetype'), url('fonts/gapsansblack-webfont.svg#gap_sansblack') format('svg');
+  font-weight: 800;
+}
+/******** MEDIA QUERIES ********/
+/******** VARIABLES ********/
+/******** MIXINS ********/
+/**PROPORTIONAL FONTSIZE & LINE-HEIGHT**/
+/*@media (min-width: 200px) and (max-width: 800px) {
+  body {
+    font-size: calc( 4pt + 2 * ( ( 100vw - 200px) / 600 )) !important;
+    line-height: calc( 5.5pt + 2.75 * ( ( 100vw - 200px) / 600 )) !important;
+  }
+}*/
+@media (max-width: 767px) {
+  body {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 767px) and (max-width: 1920px) {
+  body {
+    font-size: calc(18px + 8 * ( (100vw - 767px) / (1920 - 767) )) !important;
+  }
+}
+@media (min-width: 1920px) {
+  body {
+    font-size: 26px !important;
+  }
+}
+@font-face {
+  font-family: "LMMono10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMMono10/normal/normal/lmmono10-regular.eot"), url("fonts/lm/LMMono10/normal/normal/lmmono10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMono10/normal/normal/lmmono10-regular.woff") format("woff"), url("fonts/lm/LMMono10/normal/normal/lmmono10-regular.ttf") format("truetype"), url("fonts/lm/LMMono10/normal/normal/lmmono10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMono12";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMMono12/normal/normal/lmmono12-regular.eot"), url("fonts/lm/LMMono12/normal/normal/lmmono12-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMono12/normal/normal/lmmono12-regular.woff") format("woff"), url("fonts/lm/LMMono12/normal/normal/lmmono12-regular.ttf") format("truetype"), url("fonts/lm/LMMono12/normal/normal/lmmono12-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMono8";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMMono8/normal/normal/lmmono8-regular.eot"), url("fonts/lm/LMMono8/normal/normal/lmmono8-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMono8/normal/normal/lmmono8-regular.woff") format("woff"), url("fonts/lm/LMMono8/normal/normal/lmmono8-regular.ttf") format("truetype"), url("fonts/lm/LMMono8/normal/normal/lmmono8-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMono9";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMMono9/normal/normal/lmmono9-regular.eot"), url("fonts/lm/LMMono9/normal/normal/lmmono9-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMono9/normal/normal/lmmono9-regular.woff") format("woff"), url("fonts/lm/LMMono9/normal/normal/lmmono9-regular.ttf") format("truetype"), url("fonts/lm/LMMono9/normal/normal/lmmono9-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoCaps10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoCaps10/normal/italic/lmmonocaps10-oblique.eot"), url("fonts/lm/LMMonoCaps10/normal/italic/lmmonocaps10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoCaps10/normal/italic/lmmonocaps10-oblique.woff") format("woff"), url("fonts/lm/LMMonoCaps10/normal/italic/lmmonocaps10-oblique.ttf") format("truetype"), url("fonts/lm/LMMonoCaps10/normal/italic/lmmonocaps10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMMonoCaps10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMMonoCaps10/normal/normal/lmmonocaps10-regular.eot"), url("fonts/lm/LMMonoCaps10/normal/normal/lmmonocaps10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoCaps10/normal/normal/lmmonocaps10-regular.woff") format("woff"), url("fonts/lm/LMMonoCaps10/normal/normal/lmmonocaps10-regular.ttf") format("truetype"), url("fonts/lm/LMMonoCaps10/normal/normal/lmmonocaps10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoLt10";
+  font-weight: "bold";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoLt10/bold/italic/lmmonolt10-boldoblique.eot"), url("fonts/lm/LMMonoLt10/bold/italic/lmmonolt10-boldoblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoLt10/bold/italic/lmmonolt10-boldoblique.woff") format("woff"), url("fonts/lm/LMMonoLt10/bold/italic/lmmonolt10-boldoblique.ttf") format("truetype"), url("fonts/lm/LMMonoLt10/bold/italic/lmmonolt10-boldoblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMMonoLt10";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMMonoLt10/bold/normal/lmmonolt10-bold.eot"), url("fonts/lm/LMMonoLt10/bold/normal/lmmonolt10-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoLt10/bold/normal/lmmonolt10-bold.woff") format("woff"), url("fonts/lm/LMMonoLt10/bold/normal/lmmonolt10-bold.ttf") format("truetype"), url("fonts/lm/LMMonoLt10/bold/normal/lmmonolt10-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoLt10";
+  font-weight: "light";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoLt10/light/italic/lmmonolt10-oblique.eot"), url("fonts/lm/LMMonoLt10/light/italic/lmmonolt10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoLt10/light/italic/lmmonolt10-oblique.woff") format("woff"), url("fonts/lm/LMMonoLt10/light/italic/lmmonolt10-oblique.ttf") format("truetype"), url("fonts/lm/LMMonoLt10/light/italic/lmmonolt10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMMonoLt10";
+  font-weight: "light";
+  font-style: "normal";
+  src: url("fonts/lm/LMMonoLt10/light/normal/lmmonolt10-regular.eot"), url("fonts/lm/LMMonoLt10/light/normal/lmmonolt10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoLt10/light/normal/lmmonolt10-regular.woff") format("woff"), url("fonts/lm/LMMonoLt10/light/normal/lmmonolt10-regular.ttf") format("truetype"), url("fonts/lm/LMMonoLt10/light/normal/lmmonolt10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoLtCond10";
+  font-weight: "light";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoLtCond10/light/italic/lmmonoltcond10-oblique.eot"), url("fonts/lm/LMMonoLtCond10/light/italic/lmmonoltcond10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoLtCond10/light/italic/lmmonoltcond10-oblique.woff") format("woff"), url("fonts/lm/LMMonoLtCond10/light/italic/lmmonoltcond10-oblique.ttf") format("truetype"), url("fonts/lm/LMMonoLtCond10/light/italic/lmmonoltcond10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMMonoLtCond10";
+  font-weight: "light";
+  font-style: "normal";
+  src: url("fonts/lm/LMMonoLtCond10/light/normal/lmmonoltcond10-regular.eot"), url("fonts/lm/LMMonoLtCond10/light/normal/lmmonoltcond10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoLtCond10/light/normal/lmmonoltcond10-regular.woff") format("woff"), url("fonts/lm/LMMonoLtCond10/light/normal/lmmonoltcond10-regular.ttf") format("truetype"), url("fonts/lm/LMMonoLtCond10/light/normal/lmmonoltcond10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoProp10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoProp10/normal/italic/lmmonoprop10-oblique.eot"), url("fonts/lm/LMMonoProp10/normal/italic/lmmonoprop10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoProp10/normal/italic/lmmonoprop10-oblique.woff") format("woff"), url("fonts/lm/LMMonoProp10/normal/italic/lmmonoprop10-oblique.ttf") format("truetype"), url("fonts/lm/LMMonoProp10/normal/italic/lmmonoprop10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMMonoProp10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMMonoProp10/normal/normal/lmmonoprop10-regular.eot"), url("fonts/lm/LMMonoProp10/normal/normal/lmmonoprop10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoProp10/normal/normal/lmmonoprop10-regular.woff") format("woff"), url("fonts/lm/LMMonoProp10/normal/normal/lmmonoprop10-regular.ttf") format("truetype"), url("fonts/lm/LMMonoProp10/normal/normal/lmmonoprop10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoPropLt10";
+  font-weight: "bold";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoPropLt10/bold/italic/lmmonoproplt10-boldoblique.eot"), url("fonts/lm/LMMonoPropLt10/bold/italic/lmmonoproplt10-boldoblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoPropLt10/bold/italic/lmmonoproplt10-boldoblique.woff") format("woff"), url("fonts/lm/LMMonoPropLt10/bold/italic/lmmonoproplt10-boldoblique.ttf") format("truetype"), url("fonts/lm/LMMonoPropLt10/bold/italic/lmmonoproplt10-boldoblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMMonoPropLt10";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMMonoPropLt10/bold/normal/lmmonoproplt10-bold.eot"), url("fonts/lm/LMMonoPropLt10/bold/normal/lmmonoproplt10-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoPropLt10/bold/normal/lmmonoproplt10-bold.woff") format("woff"), url("fonts/lm/LMMonoPropLt10/bold/normal/lmmonoproplt10-bold.ttf") format("truetype"), url("fonts/lm/LMMonoPropLt10/bold/normal/lmmonoproplt10-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoPropLt10";
+  font-weight: "light";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoPropLt10/light/italic/lmmonoproplt10-oblique.eot"), url("fonts/lm/LMMonoPropLt10/light/italic/lmmonoproplt10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoPropLt10/light/italic/lmmonoproplt10-oblique.woff") format("woff"), url("fonts/lm/LMMonoPropLt10/light/italic/lmmonoproplt10-oblique.ttf") format("truetype"), url("fonts/lm/LMMonoPropLt10/light/italic/lmmonoproplt10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMMonoPropLt10";
+  font-weight: "light";
+  font-style: "normal";
+  src: url("fonts/lm/LMMonoPropLt10/light/normal/lmmonoproplt10-regular.eot"), url("fonts/lm/LMMonoPropLt10/light/normal/lmmonoproplt10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoPropLt10/light/normal/lmmonoproplt10-regular.woff") format("woff"), url("fonts/lm/LMMonoPropLt10/light/normal/lmmonoproplt10-regular.ttf") format("truetype"), url("fonts/lm/LMMonoPropLt10/light/normal/lmmonoproplt10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMMonoSlant10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMMonoSlant10/normal/italic/lmmonoslant10-regular.eot"), url("fonts/lm/LMMonoSlant10/normal/italic/lmmonoslant10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMMonoSlant10/normal/italic/lmmonoslant10-regular.woff") format("woff"), url("fonts/lm/LMMonoSlant10/normal/italic/lmmonoslant10-regular.ttf") format("truetype"), url("fonts/lm/LMMonoSlant10/normal/italic/lmmonoslant10-regular.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRoman10";
+  font-weight: "bold";
+  font-style: "italic";
+  src: url("fonts/lm/LMRoman10/bold/italic/lmroman10-bolditalic.eot"), url("fonts/lm/LMRoman10/bold/italic/lmroman10-bolditalic.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman10/bold/italic/lmroman10-bolditalic.woff") format("woff"), url("fonts/lm/LMRoman10/bold/italic/lmroman10-bolditalic.ttf") format("truetype"), url("fonts/lm/LMRoman10/bold/italic/lmroman10-bolditalic.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRoman10";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman10/bold/normal/lmroman10-bold.eot"), url("fonts/lm/LMRoman10/bold/normal/lmroman10-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman10/bold/normal/lmroman10-bold.woff") format("woff"), url("fonts/lm/LMRoman10/bold/normal/lmroman10-bold.ttf") format("truetype"), url("fonts/lm/LMRoman10/bold/normal/lmroman10-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRoman10/normal/italic/lmroman10-italic.eot"), url("fonts/lm/LMRoman10/normal/italic/lmroman10-italic.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman10/normal/italic/lmroman10-italic.woff") format("woff"), url("fonts/lm/LMRoman10/normal/italic/lmroman10-italic.ttf") format("truetype"), url("fonts/lm/LMRoman10/normal/italic/lmroman10-italic.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRoman10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman10/normal/normal/lmroman10-regular.eot"), url("fonts/lm/LMRoman10/normal/normal/lmroman10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman10/normal/normal/lmroman10-regular.woff") format("woff"), url("fonts/lm/LMRoman10/normal/normal/lmroman10-regular.ttf") format("truetype"), url("fonts/lm/LMRoman10/normal/normal/lmroman10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman12";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman12/bold/normal/lmroman12-bold.eot"), url("fonts/lm/LMRoman12/bold/normal/lmroman12-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman12/bold/normal/lmroman12-bold.woff") format("woff"), url("fonts/lm/LMRoman12/bold/normal/lmroman12-bold.ttf") format("truetype"), url("fonts/lm/LMRoman12/bold/normal/lmroman12-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman12";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRoman12/normal/italic/lmroman12-italic.eot"), url("fonts/lm/LMRoman12/normal/italic/lmroman12-italic.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman12/normal/italic/lmroman12-italic.woff") format("woff"), url("fonts/lm/LMRoman12/normal/italic/lmroman12-italic.ttf") format("truetype"), url("fonts/lm/LMRoman12/normal/italic/lmroman12-italic.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRoman12";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman12/normal/normal/lmroman12-regular.eot"), url("fonts/lm/LMRoman12/normal/normal/lmroman12-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman12/normal/normal/lmroman12-regular.woff") format("woff"), url("fonts/lm/LMRoman12/normal/normal/lmroman12-regular.ttf") format("truetype"), url("fonts/lm/LMRoman12/normal/normal/lmroman12-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman17";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman17/normal/normal/lmroman17-regular.eot"), url("fonts/lm/LMRoman17/normal/normal/lmroman17-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman17/normal/normal/lmroman17-regular.woff") format("woff"), url("fonts/lm/LMRoman17/normal/normal/lmroman17-regular.ttf") format("truetype"), url("fonts/lm/LMRoman17/normal/normal/lmroman17-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman5";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman5/bold/normal/lmroman5-bold.eot"), url("fonts/lm/LMRoman5/bold/normal/lmroman5-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman5/bold/normal/lmroman5-bold.woff") format("woff"), url("fonts/lm/LMRoman5/bold/normal/lmroman5-bold.ttf") format("truetype"), url("fonts/lm/LMRoman5/bold/normal/lmroman5-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman5";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman5/normal/normal/lmroman5-regular.eot"), url("fonts/lm/LMRoman5/normal/normal/lmroman5-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman5/normal/normal/lmroman5-regular.woff") format("woff"), url("fonts/lm/LMRoman5/normal/normal/lmroman5-regular.ttf") format("truetype"), url("fonts/lm/LMRoman5/normal/normal/lmroman5-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman6";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman6/bold/normal/lmroman6-bold.eot"), url("fonts/lm/LMRoman6/bold/normal/lmroman6-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman6/bold/normal/lmroman6-bold.woff") format("woff"), url("fonts/lm/LMRoman6/bold/normal/lmroman6-bold.ttf") format("truetype"), url("fonts/lm/LMRoman6/bold/normal/lmroman6-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman6";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman6/normal/normal/lmroman6-regular.eot"), url("fonts/lm/LMRoman6/normal/normal/lmroman6-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman6/normal/normal/lmroman6-regular.woff") format("woff"), url("fonts/lm/LMRoman6/normal/normal/lmroman6-regular.ttf") format("truetype"), url("fonts/lm/LMRoman6/normal/normal/lmroman6-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman7";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman7/bold/normal/lmroman7-bold.eot"), url("fonts/lm/LMRoman7/bold/normal/lmroman7-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman7/bold/normal/lmroman7-bold.woff") format("woff"), url("fonts/lm/LMRoman7/bold/normal/lmroman7-bold.ttf") format("truetype"), url("fonts/lm/LMRoman7/bold/normal/lmroman7-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman7";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRoman7/normal/italic/lmroman7-italic.eot"), url("fonts/lm/LMRoman7/normal/italic/lmroman7-italic.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman7/normal/italic/lmroman7-italic.woff") format("woff"), url("fonts/lm/LMRoman7/normal/italic/lmroman7-italic.ttf") format("truetype"), url("fonts/lm/LMRoman7/normal/italic/lmroman7-italic.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRoman7";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman7/normal/normal/lmroman7-regular.eot"), url("fonts/lm/LMRoman7/normal/normal/lmroman7-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman7/normal/normal/lmroman7-regular.woff") format("woff"), url("fonts/lm/LMRoman7/normal/normal/lmroman7-regular.ttf") format("truetype"), url("fonts/lm/LMRoman7/normal/normal/lmroman7-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman8";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman8/bold/normal/lmroman8-bold.eot"), url("fonts/lm/LMRoman8/bold/normal/lmroman8-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman8/bold/normal/lmroman8-bold.woff") format("woff"), url("fonts/lm/LMRoman8/bold/normal/lmroman8-bold.ttf") format("truetype"), url("fonts/lm/LMRoman8/bold/normal/lmroman8-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman8";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRoman8/normal/italic/lmroman8-italic.eot"), url("fonts/lm/LMRoman8/normal/italic/lmroman8-italic.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman8/normal/italic/lmroman8-italic.woff") format("woff"), url("fonts/lm/LMRoman8/normal/italic/lmroman8-italic.ttf") format("truetype"), url("fonts/lm/LMRoman8/normal/italic/lmroman8-italic.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRoman8";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman8/normal/normal/lmroman8-regular.eot"), url("fonts/lm/LMRoman8/normal/normal/lmroman8-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman8/normal/normal/lmroman8-regular.woff") format("woff"), url("fonts/lm/LMRoman8/normal/normal/lmroman8-regular.ttf") format("truetype"), url("fonts/lm/LMRoman8/normal/normal/lmroman8-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman9";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman9/bold/normal/lmroman9-bold.eot"), url("fonts/lm/LMRoman9/bold/normal/lmroman9-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman9/bold/normal/lmroman9-bold.woff") format("woff"), url("fonts/lm/LMRoman9/bold/normal/lmroman9-bold.ttf") format("truetype"), url("fonts/lm/LMRoman9/bold/normal/lmroman9-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRoman9";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRoman9/normal/italic/lmroman9-italic.eot"), url("fonts/lm/LMRoman9/normal/italic/lmroman9-italic.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman9/normal/italic/lmroman9-italic.woff") format("woff"), url("fonts/lm/LMRoman9/normal/italic/lmroman9-italic.ttf") format("truetype"), url("fonts/lm/LMRoman9/normal/italic/lmroman9-italic.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRoman9";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRoman9/normal/normal/lmroman9-regular.eot"), url("fonts/lm/LMRoman9/normal/normal/lmroman9-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRoman9/normal/normal/lmroman9-regular.woff") format("woff"), url("fonts/lm/LMRoman9/normal/normal/lmroman9-regular.ttf") format("truetype"), url("fonts/lm/LMRoman9/normal/normal/lmroman9-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRomanCaps10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanCaps10/normal/italic/lmromancaps10-oblique.eot"), url("fonts/lm/LMRomanCaps10/normal/italic/lmromancaps10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanCaps10/normal/italic/lmromancaps10-oblique.woff") format("woff"), url("fonts/lm/LMRomanCaps10/normal/italic/lmromancaps10-oblique.ttf") format("truetype"), url("fonts/lm/LMRomanCaps10/normal/italic/lmromancaps10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanCaps10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRomanCaps10/normal/normal/lmromancaps10-regular.eot"), url("fonts/lm/LMRomanCaps10/normal/normal/lmromancaps10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanCaps10/normal/normal/lmromancaps10-regular.woff") format("woff"), url("fonts/lm/LMRomanCaps10/normal/normal/lmromancaps10-regular.ttf") format("truetype"), url("fonts/lm/LMRomanCaps10/normal/normal/lmromancaps10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRomanDemi10";
+  font-weight: "demi";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanDemi10/demi/italic/lmromandemi10-oblique.eot"), url("fonts/lm/LMRomanDemi10/demi/italic/lmromandemi10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanDemi10/demi/italic/lmromandemi10-oblique.woff") format("woff"), url("fonts/lm/LMRomanDemi10/demi/italic/lmromandemi10-oblique.ttf") format("truetype"), url("fonts/lm/LMRomanDemi10/demi/italic/lmromandemi10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanDemi10";
+  font-weight: "demi";
+  font-style: "normal";
+  src: url("fonts/lm/LMRomanDemi10/demi/normal/lmromandemi10-regular.eot"), url("fonts/lm/LMRomanDemi10/demi/normal/lmromandemi10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanDemi10/demi/normal/lmromandemi10-regular.woff") format("woff"), url("fonts/lm/LMRomanDemi10/demi/normal/lmromandemi10-regular.ttf") format("truetype"), url("fonts/lm/LMRomanDemi10/demi/normal/lmromandemi10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRomanDunh10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanDunh10/normal/italic/lmromandunh10-oblique.eot"), url("fonts/lm/LMRomanDunh10/normal/italic/lmromandunh10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanDunh10/normal/italic/lmromandunh10-oblique.woff") format("woff"), url("fonts/lm/LMRomanDunh10/normal/italic/lmromandunh10-oblique.ttf") format("truetype"), url("fonts/lm/LMRomanDunh10/normal/italic/lmromandunh10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanDunh10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRomanDunh10/normal/normal/lmromandunh10-regular.eot"), url("fonts/lm/LMRomanDunh10/normal/normal/lmromandunh10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanDunh10/normal/normal/lmromandunh10-regular.woff") format("woff"), url("fonts/lm/LMRomanDunh10/normal/normal/lmromandunh10-regular.ttf") format("truetype"), url("fonts/lm/LMRomanDunh10/normal/normal/lmromandunh10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMRomanSlant10";
+  font-weight: "bold";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanSlant10/bold/italic/lmromanslant10-bold.eot"), url("fonts/lm/LMRomanSlant10/bold/italic/lmromanslant10-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanSlant10/bold/italic/lmromanslant10-bold.woff") format("woff"), url("fonts/lm/LMRomanSlant10/bold/italic/lmromanslant10-bold.ttf") format("truetype"), url("fonts/lm/LMRomanSlant10/bold/italic/lmromanslant10-bold.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanSlant10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanSlant10/normal/italic/lmromanslant10-regular.eot"), url("fonts/lm/LMRomanSlant10/normal/italic/lmromanslant10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanSlant10/normal/italic/lmromanslant10-regular.woff") format("woff"), url("fonts/lm/LMRomanSlant10/normal/italic/lmromanslant10-regular.ttf") format("truetype"), url("fonts/lm/LMRomanSlant10/normal/italic/lmromanslant10-regular.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanSlant12";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanSlant12/normal/italic/lmromanslant12-regular.eot"), url("fonts/lm/LMRomanSlant12/normal/italic/lmromanslant12-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanSlant12/normal/italic/lmromanslant12-regular.woff") format("woff"), url("fonts/lm/LMRomanSlant12/normal/italic/lmromanslant12-regular.ttf") format("truetype"), url("fonts/lm/LMRomanSlant12/normal/italic/lmromanslant12-regular.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanSlant17";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanSlant17/normal/italic/lmromanslant17-regular.eot"), url("fonts/lm/LMRomanSlant17/normal/italic/lmromanslant17-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanSlant17/normal/italic/lmromanslant17-regular.woff") format("woff"), url("fonts/lm/LMRomanSlant17/normal/italic/lmromanslant17-regular.ttf") format("truetype"), url("fonts/lm/LMRomanSlant17/normal/italic/lmromanslant17-regular.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanSlant8";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanSlant8/normal/italic/lmromanslant8-regular.eot"), url("fonts/lm/LMRomanSlant8/normal/italic/lmromanslant8-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanSlant8/normal/italic/lmromanslant8-regular.woff") format("woff"), url("fonts/lm/LMRomanSlant8/normal/italic/lmromanslant8-regular.ttf") format("truetype"), url("fonts/lm/LMRomanSlant8/normal/italic/lmromanslant8-regular.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanSlant9";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMRomanSlant9/normal/italic/lmromanslant9-regular.eot"), url("fonts/lm/LMRomanSlant9/normal/italic/lmromanslant9-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanSlant9/normal/italic/lmromanslant9-regular.woff") format("woff"), url("fonts/lm/LMRomanSlant9/normal/italic/lmromanslant9-regular.ttf") format("truetype"), url("fonts/lm/LMRomanSlant9/normal/italic/lmromanslant9-regular.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMRomanUnsl10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMRomanUnsl10/normal/normal/lmromanunsl10-regular.eot"), url("fonts/lm/LMRomanUnsl10/normal/normal/lmromanunsl10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMRomanUnsl10/normal/normal/lmromanunsl10-regular.woff") format("woff"), url("fonts/lm/LMRomanUnsl10/normal/normal/lmromanunsl10-regular.ttf") format("truetype"), url("fonts/lm/LMRomanUnsl10/normal/normal/lmromanunsl10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSans10";
+  font-weight: "bold";
+  font-style: "italic";
+  src: url("fonts/lm/LMSans10/bold/italic/lmsans10-boldoblique.eot"), url("fonts/lm/LMSans10/bold/italic/lmsans10-boldoblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans10/bold/italic/lmsans10-boldoblique.woff") format("woff"), url("fonts/lm/LMSans10/bold/italic/lmsans10-boldoblique.ttf") format("truetype"), url("fonts/lm/LMSans10/bold/italic/lmsans10-boldoblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSans10";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMSans10/bold/normal/lmsans10-bold.eot"), url("fonts/lm/LMSans10/bold/normal/lmsans10-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans10/bold/normal/lmsans10-bold.woff") format("woff"), url("fonts/lm/LMSans10/bold/normal/lmsans10-bold.ttf") format("truetype"), url("fonts/lm/LMSans10/bold/normal/lmsans10-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSans10";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMSans10/normal/italic/lmsans10-oblique.eot"), url("fonts/lm/LMSans10/normal/italic/lmsans10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans10/normal/italic/lmsans10-oblique.woff") format("woff"), url("fonts/lm/LMSans10/normal/italic/lmsans10-oblique.ttf") format("truetype"), url("fonts/lm/LMSans10/normal/italic/lmsans10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSans10";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMSans10/normal/normal/lmsans10-regular.eot"), url("fonts/lm/LMSans10/normal/normal/lmsans10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans10/normal/normal/lmsans10-regular.woff") format("woff"), url("fonts/lm/LMSans10/normal/normal/lmsans10-regular.ttf") format("truetype"), url("fonts/lm/LMSans10/normal/normal/lmsans10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSans12";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMSans12/normal/italic/lmsans12-oblique.eot"), url("fonts/lm/LMSans12/normal/italic/lmsans12-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans12/normal/italic/lmsans12-oblique.woff") format("woff"), url("fonts/lm/LMSans12/normal/italic/lmsans12-oblique.ttf") format("truetype"), url("fonts/lm/LMSans12/normal/italic/lmsans12-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSans12";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMSans12/normal/normal/lmsans12-regular.eot"), url("fonts/lm/LMSans12/normal/normal/lmsans12-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans12/normal/normal/lmsans12-regular.woff") format("woff"), url("fonts/lm/LMSans12/normal/normal/lmsans12-regular.ttf") format("truetype"), url("fonts/lm/LMSans12/normal/normal/lmsans12-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSans17";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMSans17/normal/italic/lmsans17-oblique.eot"), url("fonts/lm/LMSans17/normal/italic/lmsans17-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans17/normal/italic/lmsans17-oblique.woff") format("woff"), url("fonts/lm/LMSans17/normal/italic/lmsans17-oblique.ttf") format("truetype"), url("fonts/lm/LMSans17/normal/italic/lmsans17-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSans17";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMSans17/normal/normal/lmsans17-regular.eot"), url("fonts/lm/LMSans17/normal/normal/lmsans17-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans17/normal/normal/lmsans17-regular.woff") format("woff"), url("fonts/lm/LMSans17/normal/normal/lmsans17-regular.ttf") format("truetype"), url("fonts/lm/LMSans17/normal/normal/lmsans17-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSans8";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMSans8/normal/italic/lmsans8-oblique.eot"), url("fonts/lm/LMSans8/normal/italic/lmsans8-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans8/normal/italic/lmsans8-oblique.woff") format("woff"), url("fonts/lm/LMSans8/normal/italic/lmsans8-oblique.ttf") format("truetype"), url("fonts/lm/LMSans8/normal/italic/lmsans8-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSans8";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMSans8/normal/normal/lmsans8-regular.eot"), url("fonts/lm/LMSans8/normal/normal/lmsans8-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans8/normal/normal/lmsans8-regular.woff") format("woff"), url("fonts/lm/LMSans8/normal/normal/lmsans8-regular.ttf") format("truetype"), url("fonts/lm/LMSans8/normal/normal/lmsans8-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSans9";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMSans9/normal/italic/lmsans9-oblique.eot"), url("fonts/lm/LMSans9/normal/italic/lmsans9-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans9/normal/italic/lmsans9-oblique.woff") format("woff"), url("fonts/lm/LMSans9/normal/italic/lmsans9-oblique.ttf") format("truetype"), url("fonts/lm/LMSans9/normal/italic/lmsans9-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSans9";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMSans9/normal/normal/lmsans9-regular.eot"), url("fonts/lm/LMSans9/normal/normal/lmsans9-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSans9/normal/normal/lmsans9-regular.woff") format("woff"), url("fonts/lm/LMSans9/normal/normal/lmsans9-regular.ttf") format("truetype"), url("fonts/lm/LMSans9/normal/normal/lmsans9-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSansDemiCond10";
+  font-weight: "demi";
+  font-style: "italic";
+  src: url("fonts/lm/LMSansDemiCond10/demi/italic/lmsansdemicond10-oblique.eot"), url("fonts/lm/LMSansDemiCond10/demi/italic/lmsansdemicond10-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSansDemiCond10/demi/italic/lmsansdemicond10-oblique.woff") format("woff"), url("fonts/lm/LMSansDemiCond10/demi/italic/lmsansdemicond10-oblique.ttf") format("truetype"), url("fonts/lm/LMSansDemiCond10/demi/italic/lmsansdemicond10-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSansDemiCond10";
+  font-weight: "demi";
+  font-style: "normal";
+  src: url("fonts/lm/LMSansDemiCond10/demi/normal/lmsansdemicond10-regular.eot"), url("fonts/lm/LMSansDemiCond10/demi/normal/lmsansdemicond10-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSansDemiCond10/demi/normal/lmsansdemicond10-regular.woff") format("woff"), url("fonts/lm/LMSansDemiCond10/demi/normal/lmsansdemicond10-regular.ttf") format("truetype"), url("fonts/lm/LMSansDemiCond10/demi/normal/lmsansdemicond10-regular.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSansQuot8";
+  font-weight: "bold";
+  font-style: "italic";
+  src: url("fonts/lm/LMSansQuot8/bold/italic/lmsansquot8-boldoblique.eot"), url("fonts/lm/LMSansQuot8/bold/italic/lmsansquot8-boldoblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSansQuot8/bold/italic/lmsansquot8-boldoblique.woff") format("woff"), url("fonts/lm/LMSansQuot8/bold/italic/lmsansquot8-boldoblique.ttf") format("truetype"), url("fonts/lm/LMSansQuot8/bold/italic/lmsansquot8-boldoblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSansQuot8";
+  font-weight: "bold";
+  font-style: "normal";
+  src: url("fonts/lm/LMSansQuot8/bold/normal/lmsansquot8-bold.eot"), url("fonts/lm/LMSansQuot8/bold/normal/lmsansquot8-bold.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSansQuot8/bold/normal/lmsansquot8-bold.woff") format("woff"), url("fonts/lm/LMSansQuot8/bold/normal/lmsansquot8-bold.ttf") format("truetype"), url("fonts/lm/LMSansQuot8/bold/normal/lmsansquot8-bold.svg#normal") format("svg");
+}
+@font-face {
+  font-family: "LMSansQuot8";
+  font-weight: "normal";
+  font-style: "italic";
+  src: url("fonts/lm/LMSansQuot8/normal/italic/lmsansquot8-oblique.eot"), url("fonts/lm/LMSansQuot8/normal/italic/lmsansquot8-oblique.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSansQuot8/normal/italic/lmsansquot8-oblique.woff") format("woff"), url("fonts/lm/LMSansQuot8/normal/italic/lmsansquot8-oblique.ttf") format("truetype"), url("fonts/lm/LMSansQuot8/normal/italic/lmsansquot8-oblique.svg#italic") format("svg");
+}
+@font-face {
+  font-family: "LMSansQuot8";
+  font-weight: "normal";
+  font-style: "normal";
+  src: url("fonts/lm/LMSansQuot8/normal/normal/lmsansquot8-regular.eot"), url("fonts/lm/LMSansQuot8/normal/normal/lmsansquot8-regular.eot?#iefix") format("embedded-opentype"), url("fonts/lm/LMSansQuot8/normal/normal/lmsansquot8-regular.woff") format("woff"), url("fonts/lm/LMSansQuot8/normal/normal/lmsansquot8-regular.ttf") format("truetype"), url("fonts/lm/LMSansQuot8/normal/normal/lmsansquot8-regular.svg#normal") format("svg");
+}
+body {
+  font-family: "gap_sans";
+  font-weight: 100;
+  font-style: initial;
+  font-size: inherit;
+  line-height: 125%;
+  color: #1b5faa;
+  height: 100%;
+}
+a:link,
+a:visited {
+  color: #1b5faa;
+}
+a:hover {
+  cursor: pointer;
+}
+a.anchor {
+  text-decoration: none !important;
+}
+.agenda-item {
+  width: 294px !important;
+  margin: 8px;
+  padding: 8px !important;
+}
+div:target,
+.agenda-item:hover {
+  background: #1b5faa;
+  color: #fff !important;
+  border-color: #fff;
+}
+div:target *,
+.agenda-item:hover * {
+  color: #fff !important;
+}
+.event-core {
+  border-left: 3px solid #1b5faa;
+  padding-left: 9px;
+}
+.event-extra {
+  border-left: 7px double #1b5faa;
+  padding-left: 9px;
+}
+.event-title {
+  font-weight: bold;
+}
+p {
+  padding-bottom: 9px;
+}
+h1.title {
+  font-family: "gap_sans";
+  font-weight: 400;
+  font-style: initial;
+  font-size: 3.8vmax;
+  line-height: inherit;
+  color: #1b5faa;
+  width: 100%;
+  display: block;
+}
+@media only screen and (max-device-width: 1280px) and (orientation: portrait) {
+}
+.margin-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #1b5faa;
+}
+.margin-header .index-header,
+.margin-header a {
+  display: flex;
+}
+.margin-header img {
+  height: 2.8vmax;
+}
+.margin-header {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: initial;
+  left: 0px;
+  z-index: 1;
+  font-family: "gap_sans";
+  font-weight: 100;
+  font-style: initial;
+  font-size: inherit;
+  line-height: 7vmax;
+  color: #1b5faa;
+  height: 7vmax;
+  vertical-align: middle;
+  padding-left: 18px;
+}
+.margin-left {
+  position: absolute;
+  top: 7vmax;
+  right: initial;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 7vmax;
+}
+.main {
+  position: absolute;
+  top: 7vmax;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 7vmax);
+  background-color: #fff;
+  padding-bottom: 7vmax;
+}
+@media only screen and (orientation: portrait) {
+  .main {
+    background-image: none;
+    border-top: 2px solid #1b5faa;
+  }
+}
+.book img {
+  width: 100%;
+  border: 0.5px solid #1b5faa;
+}
+@media (min-width: 250px) {
+  .main > div {
+    width: calc(100vw);
+  }
+}
+@media (min-width: 500px) {
+  .main > div {
+    width: calc(100vw / 2 - 10px);
+  }
+}
+@media (min-width: 750px) {
+  .main > div {
+    width: calc(100vw / 3 - 9px);
+  }
+}
+@media (min-width: 1000px) {
+  .main > div {
+    width: calc(100vw / 4 - 8px);
+  }
+}
+@media (min-width: 1250px) {
+  .main > div {
+    width: calc(100vw / 5 - 8px);
+  }
+}
+.text {
+  width: 310px;
+  padding: 18px;
+  display: inline-block;
+  vertical-align: top;
+}
+.text h2 {
+  font-family: "gap_sans";
+  font-weight: 100;
+  font-style: initial;
+  font-size: 125%;
+  line-height: inherit;
+  color: #1b5faa;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+}
+.text li {
+  margin-bottom: 9px;
+}
+.text.agenda li {
+  margin-bottom: 18px;
+}
+.text.agenda li.legend .event-core {
+  margin-bottom: 6px;
+}
+.text.newsletter {
+  width: 310px;
+}
+.text.newsletter input,
+.text.newsletter label {
+  font-family: "gap_sans";
+  font-weight: 100;
+  font-style: initial;
+  font-size: inherit;
+  line-height: inherit;
+  color: #1b5faa;
+  width: 200px;
+}
+.text.newsletter input {
+  box-sizing: border-box;
+  width: calc(310px - 18px * 2);
+  vertical-align: middle;
+  margin-top: 4.5px;
+  margin-bottom: 9px;
+  cursor: text;
+  padding: 4.5px;
+  border: 1px solid #1b5faa;
+  background-color: transparent;
+}
+.text.newsletter input[type=email] {
+  cursor: text;
+}
+.text.newsletter input[type=submit] {
+  cursor: pointer;
+  background-color: #1b5faa;
+  color: #fff;
+  border: 0;
+  margin-top: 18px;
+  width: 150px;
+}
+.text.newsletter input[placeholder="*"] {
+  color: red;
+}
+.text.newsletter #mc_embed_signup div.mce_inline_error {
+  margin: 0 0 1em;
+  padding: 5px 10px;
+  font-weight: normal;
+  background-color: transparent;
+  z-index: 1;
+  color: #4d91dc;
+}
+.text.waend-wrapper {
+  margin-top: 7vmax;
+  position: relative;
+  width: initial;
+}
+@media (max-width: 767px) {
+  .text.waend-wrapper {
+    display: none;
+  }
+}
+.text.waend-wrapper .iframe-content {
+  width: calc(100vw - 7vmax - 2 * 18px);
+  height: calc((100vw - 7vmax - 2 * 18px) * 0.6);
+  min-width: 620px;
+  min-height: 350.4px;
+  max-width: 1204px;
+  max-height: 722.4px;
+}
+.text.waend-wrapper .link-waend {
+  display: block;
+  text-align: center;
+  font-size: 75%;
+}
